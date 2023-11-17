@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Dropdown Selection</title>
+</head>
+<body>
+
+  <h1 id="selectedItem">Selected Item: None</h1>
+
+  <label for="dropdown">Select an item:</label>
+  <select id="dropdown">
+    <option value="item1">Dell</option>
+    <option value="item2">Hp</option>
+    <option value="item3">Lenovo</option>
+    <option value="acer">acer</option>
+      
+  </select>
+
+  <button onclick="displaySelectedItem()">Update Selected Item</button>
+
+  <script>
+    function displaySelectedItem() {
+      // Get the dropdown element
+      var dropdown = document.getElementById("dropdown");
+
+      // Get the selected item value
+      var selectedItem = dropdown.options[dropdown.selectedIndex].value;
+
+      // Update the h1 element with the selected item
+      document.getElementById("selectedItem").textContent = "Selected Item: " + selectedItem;
+    }
+  </script>
+
+</body>
+</html>
