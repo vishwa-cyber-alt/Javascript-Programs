@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<body>
+    <h1>Created By Vishwa V</h1>
+    <style>
+        body{
+            background-color: black;
+        }
+        #clock{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            font-size: 200px;
+            top:234px;
+            left:380px;
+            background-color: black;
+            color: red;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            position:absolute;
+            top:640px;
+            left:500px;
+            color: blue;
+        }
+    </style>
+    <div id="clock"></div>
+    <script>
+    function a()
+    {
+        var now=new Date();
+        var h=now.getHours();
+        var m=now.getMinutes();
+        var s=now.getSeconds();
+        var ans=h+":"+m+":"+s;
+        document.getElementById('clock').innerHTML=ans;
+
+    }
+setInterval(a,1000);
+
+a();
+
+
+
+
+
+    </script>
+</body>
+</html>
