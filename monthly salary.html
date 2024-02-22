@@ -1,0 +1,61 @@
+<html>
+  <body>
+    <label>Enter in LPA</label>
+    <input type="text" id="a">
+   
+    <button onclick="sum()" id="btn">Calculate Monthly Salary</button>
+    <button onclick="reset()" id="btn">Reset</button>
+    <script>
+      function sum() {
+        // Retrieve the values from input fields
+  var a = parseInt(document.getElementById("a").value);
+       
+        
+        // Calculate the sum
+        var r = a*100000;
+        var result=r/12;
+        
+        // Display the result
+        alert("monthly salary is : " + result);
+      }
+      function reset()
+      {
+  document.getElementById("a").value = "";
+      }
+    </script>
+    <style>
+      
+      #btn {
+background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  
+}
+#a
+{
+  
+   width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  
+}
+      #m{
+font-size:45px;
+        color:red;
+      }
+    </style>
+    <marquee id="m">Created By Vishwa V</marquee>
+  </body>
+</html>
+
